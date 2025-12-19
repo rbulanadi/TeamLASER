@@ -1,10 +1,10 @@
-**Microscopy Hackathon 2025 Team LASER**
+# Microscopy Hackathon 2025 Team LASER
 
-**Angle-Dependent Morphologies of Ferroelectric Domain Walls**
+# Angle-Dependent Morphologies of Ferroelectric Domain Walls**
 
 _Laurel Washburn, Ehtesham Anwar, Sho Watanabe, Aidan Cotton, Kaurab Gautam, Nabin Khanal, Ralph Bulanadi_
 
-**Notes:**
+## Notes:
 
 * Code used to acquire Auto-3DPFM data, and calculate DW position was previously submitted for publication in [1].
 * ResHedNet neural network was based on the implementation published in [2].
@@ -14,7 +14,7 @@ _Laurel Washburn, Ehtesham Anwar, Sho Watanabe, Aidan Cotton, Kaurab Gautam, Nab
 * Spearman_Correlation_3DPFM_Analysis.ipynb was developed by Ehtesham Anwar to analyze domain walls and topography
 * 3DPFM_Analysis_DW_HoughLines.ipynb was developed by Laurel Washburn to fit lines to domain wall positions
 
-**Introduction**
+## Introduction
 
 Ferroelectric materials maintain a spontaneous electric polarization that is often associated with a mechanical strain in the same axis. The interplay of both electrostatic and mechanical boundary conditions lead to the emergence of ferroelectric domains—regions dominated by a particular ferroelectric orientation—bounded by ferroelectric domain walls (DWs).
 
@@ -22,7 +22,7 @@ The properties of such DWs, such as writability, increased conductivity, or mech
 
 Fully automated three-dimensional piezoresponse force microscopy (Auto-3DPFM) has recently allowed for more accessible quantitative identification of imaged ferroelectric DWs [1], and analysis of this data can lead new insights into how the characteristic angle of a DW can affect its shape; however, these datasets, mapping two-dimensional images of complex three-dimensional vectors, can be obtrusive to standard analysis techniques. As such, we here leverage artificial-intelligence and machine learning methods to identify and characterise DW shape against their characteristic angle, pushing forward our understanding of DW structure and applications.
 
-**Results**
+## Results
 
 _**Distinguishing DW Angle by Neural Networks:**_ To verify that the characteristic angle of a DW affects its shape, we first used ResHedNet [2], a neural network architecture designed to identify the position of DWs from a PFM map of ferroelectric polycrystalline PZT. When ResHedNet was trained on four experiments of Auto-3DPFM data, augmented with an 80/20 training/testing split, and with all ferroelectric DWs marked and annotated, the neural network was able to identify all DWs of a new dataset. However, when ResHedNet was trained only on images of domain-walls with a characteristic angle θ > 130°, ResHedNet was successfully able to identify only these large-vector-angle-difference ferroelectric DWs. Likewise, ResHedNet trained only on DWs with a characteristic angle 20° < θ < 90° could only identify low-angle ferroelectric DWs. Such a process proves the capability for a well-trained neural network system to not only identify DWs from Auto-3DPFM data, but further, distinguish them by their characteristic angle.
 
@@ -36,12 +36,12 @@ _**Investigation of Mechanical Properties by Spearman Correlation:**_ Finally, t
 
 When mapped against particular DW orientations, DWs with a higher characteristic angle (above approximately 100 degrees) express increases in roughness, along with an increase in variability of topographical curvature. Compared to their surrounding domains, domain walls in general present an increase in local roughness, and an increase in range in topographical curvature.
 
-**Discussion and Conclusions:**
+## Discussion and Conclusions:
 Through this work, we’ve investigated the structure and properties of ferroelectric DWs imaged by Auto-3DPFM. While Auto-3DPFM has previously shown a variety of different DW orientations, the integration of the neural network ResHedNet proved the potential to differentiate between different DW orientations by their appearance alone. Through computer vision by Hough lines, and through calculation of DW sinuosity, we have shown that lower-angle DWs tend to be more straight than their counterparts with a higher angle.
 
 We again attribute this behaviour to the interplay between electric and mechanical boundary conditions. In PZT, the ferroelectric polarization is accompanied with a strain, but across a 180° DW, where the polarization is antiparallel, there is corresponding elastic response. Meanwhile, in lower-angle domain-walls, where the DWis accompanied with an elastic response, the DW is more restricted by a material’s crystallographic axis and therefore a straighter DW becomes preferable. These descriptors, when coupled with continued research into the material properties of ferroelectric DWs, can pave the way for new research and the development of new DW devices.
 
-**References:**
+## References:
 
 [1] Bulanadi, Ralph, et al. "Auto-3DPFM: Automating Polarization-Vector Mapping at the Nanoscale." arXiv preprint arXiv:2512.09249 (2025).
 

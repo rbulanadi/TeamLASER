@@ -8,12 +8,17 @@ _Laurel Washburn, Ehtesham Anwar, Sho Watanabe, Aidan Cotton, Kaurab Gautam, Nab
 
 * Code used to acquire Auto-3DPFM data, and calculate DW position was previously submitted for publication in [1].
 * ResHedNet neural network was based on the implementation published in [2].
+* Files Image.hf5.zip, Image2.hf5.zip, Image3.hf5.zip, Image_1V.hf5.zip, Image_rot90.hf5.zip contain raw 3DPFM data
+* ResHedNet_DWs_Auto3DPFM.ipynb was adapted from Ref. [2] by Ralph Bulanadi as a neural network to analyse Auto-3DPFM data
+* 3DPFM_Analysis_Centerline-Width.ipynb was developed by Ralph Bulanadi to characterize domain wall sinuosity and thickness
+* Spearman_Correlation_3DPFM_Analysis.ipynb was developed by Ehtesham Anwar to analyze domain walls and topography
+* 3DPFM_Analysis_DW_HoughLines.ipynb was developed by Laurel Washburn to fit lines to domain wall positions
 
 **Introduction**
 
 Ferroelectric materials maintain a spontaneous electric polarization that is often associated with a mechanical strain in the same axis. The interplay of both electrostatic and mechanical boundary conditions lead to the emergence of ferroelectric domains—regions dominated by a particular ferroelectric orientation—bounded by ferroelectric domain walls (DWs).
 
-The properties of such DWs, such as writability, increased conductivity, or mechanical softness yield immense potential for future applications in nanoelectronics, but the complexity of their formation and structure mandate extensive further research before these applications can be realised. The system may relax to minimize charge buildup from adjacent domains at DWs, for example, yielding particular preferred DW structures associated with the vector-angle difference of its two bounding domains. The elastic boundary conditions of single grains or single crystals may also restrict domain-wall conformations: In rhombohedral ferroelectrics, such as zirconium-rich PZT, the ferroelectric polarization forms along the {111} axes; as the vector-angle difference between any two {111} vectors are either 71°, 109°, or 180°, the DWs between these domains likewise forms these characteristic angles. This interplay between the crystallographic constraints of domains, and the minimization of the interfacial energy of ferroelectric DW, yield complex patterns and properties. An enhanced understanding of this DW-structure–property relationship can therefore yield new strides in the development of nanoelectronic devices.
+The properties of such DWs, such as writability, increased conductivity, or mechanical softness yield immense potential for future applications in nanoelectronics, but the complexity of their formation and structure mandate extensive further research before these applications can be realized. The system may relax to minimize charge buildup from adjacent domains at DWs, for example, yielding particular preferred DW structures associated with the vector-angle difference of its two bounding domains. The elastic boundary conditions of single grains or single crystals may also restrict domain-wall conformations: In rhombohedral ferroelectrics, such as zirconium-rich PZT, the ferroelectric polarization forms along the {111} axes; as the vector-angle difference between any two {111} vectors are either 71°, 109°, or 180°, the DWs between these domains likewise forms these characteristic angles. This interplay between the crystallographic constraints of domains, and the minimization of the interfacial energy of ferroelectric DW, yield complex patterns and properties. An enhanced understanding of this DW-structure–property relationship can therefore yield new strides in the development of nanoelectronic devices.
 
 Fully automated three-dimensional piezoresponse force microscopy (Auto-3DPFM) has recently allowed for more accessible quantitative identification of imaged ferroelectric DWs [1], and analysis of this data can lead new insights into how the characteristic angle of a DW can affect its shape; however, these datasets, mapping two-dimensional images of complex three-dimensional vectors, can be obtrusive to standard analysis techniques. As such, we here leverage artificial-intelligence and machine learning methods to identify and characterise DW shape against their characteristic angle, pushing forward our understanding of DW structure and applications.
 
@@ -37,9 +42,13 @@ Through this work, we’ve investigated the structure and properties of ferroele
 We again attribute this behaviour to the interplay between electric and mechanical boundary conditions. In PZT, the ferroelectric polarization is accompanied with a strain, but across a 180° DW, where the polarization is antiparallel, there is corresponding elastic response. Meanwhile, in lower-angle domain-walls, where the DWis accompanied with an elastic response, the DW is more restricted by a material’s crystallographic axis and therefore a straighter DW becomes preferable. These descriptors, when coupled with continued research into the material properties of ferroelectric DWs, can pave the way for new research and the development of new DW devices.
 
 **References:**
+
 [1] Bulanadi, Ralph, et al. "Auto-3DPFM: Automating Polarization-Vector Mapping at the Nanoscale." arXiv preprint arXiv:2512.09249 (2025).
+
 [2] Liu, Yongtao, et al. "Exploring physics of ferroelectric domain walls in real time: deep learning enabled scanning probe microscopy." Advanced Science 9.31 (2022): 2203957.
+
 [3] Bradski, Gary. “The OpenCV Library.” Dr. Dobb’s Journal of Software Tools, 2000.
+
 [4] cyschneck. centerline-width. Version 2.0.1, PyPI, 24 June 2025, https://pypi.org/project/centerline-width/. PyPI
 
 

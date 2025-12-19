@@ -1,6 +1,6 @@
 # Microscopy Hackathon 2025 Team LASER
 
-# Angle-Dependent Morphologies of Ferroelectric Domain Walls**
+## Angle-Dependent Morphologies of Ferroelectric Domain Walls
 
 _Laurel Washburn, Ehtesham Anwar, Sho Watanabe, Aidan Cotton, Kaurab Gautam, Nabin Khanal, Ralph Bulanadi_
 

@@ -5,9 +5,9 @@
 _Laurel Washburn, Ehtesham Anwar, Sho Watanabe, Aidan Cotton, Kaurab Gautam, Nabin Khanal, Ralph Bulanadi_
 
 **Notes:**
-Code used to acquire Auto-3DPFM data, and calculate DW position was previously submitted for publication in [1].
 
-ResHedNet neural network was based on the implementation published in [2].
+* Code used to acquire Auto-3DPFM data, and calculate DW position was previously submitted for publication in [1].
+* ResHedNet neural network was based on the implementation published in [2].
 
 **Introduction**
 
